@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Chat Memory</title><style>
+    *{box-sizing:border-box}
+    .hd{display:flex;align-items:center;gap:6px;padding:10px 12px;border-bottom:1px solid #dfe1ea;font-weight:700}.hd span{flex:1}
+    #body{padding:10px 12px;overflow:auto;flex:1}
+    nav{display:flex;gap:4px;margin-bottom:10px}nav button{flex:1;padding:6px 2px;background:#eef0f7;color:#5b6073;border:0;border-radius:6px;cursor:pointer;font:12px system-ui}nav button.on{background:#5b4bf5;color:#fff}
+    button{font:12px system-ui;cursor:pointer;border:1px solid #d5d8e4;background:#eef0f7;color:#1b1d26;border-radius:6px;padding:6px 9px}button:hover{background:#e3e6f2}
+    button.pri{background:#5b4bf5;border-color:#5b4bf5;color:#fff;width:100%;padding:8px;margin-top:6px}button.dng{color:#c62828}
+    input,select,textarea{width:100%;margin:4px 0;padding:7px;background:#f6f7fb;color:#1b1d26;border:1px solid #d5d8e4;border-radius:6px;font:12px system-ui}
+    textarea{min-height:90px;resize:vertical}.row{display:flex;gap:6px;flex-wrap:wrap;align-items:center}.row>*{flex:1}
+    .m{display:flex;gap:6px;padding:3px 0;border-bottom:1px solid #eceef5;font-size:12px;cursor:pointer}.m input{width:auto;margin:2px 0}.m b{color:#5b4bf5}
+    details{border:1px solid #dfe1ea;border-radius:8px;margin:5px 0;padding:6px 8px}summary{cursor:pointer}small,.dim{color:#6b7186}
+    pre{white-space:pre-wrap;max-height:130px;overflow:auto;background:#f6f7fb;padding:6px;border-radius:6px;font:11px/1.4 ui-monospace,monospace}
+    h4{margin:12px 0 4px;color:#5b4bf5;font-size:12px;display:flex;justify-content:space-between}
+    #msg{padding:6px 12px;min-height:26px;font-size:12px;border-top:1px solid #dfe1ea}.err{color:#c62828}.ok{color:#12805c}
+  
+html,body{margin:0;height:100%}body{display:flex;flex-direction:column;background:#fff;color:#1b1d26;font:13px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif}
+  .pwbar{height:6px;border-radius:3px;background:#e3e6f2;margin:3px 0}.pwbar i{display:block;height:100%;width:0;border-radius:3px;transition:width .15s,background .15s}
+.rules{font-size:11px;margin:2px 0 6px;padding:0;list-style:none}.rules li.ok{color:#12805c}.rules li.no{color:#c62828}
+#modal{position:fixed;inset:0;background:#0007;display:grid;place-items:center;z-index:9}#modal[hidden]{display:none}.mb{background:#fff;border-radius:10px;padding:14px;width:90%;max-height:92vh;overflow:auto;box-shadow:0 8px 30px #0005}
+</style></head>
+<body><div class="hd"><span>Chat Memory</span><button id="lockBtn" hidden>Lock</button><button id="x" title="Close">x</button></div>
+<div id="body"></div><div id="msg"></div><div id="modal" hidden></div><script src="pwcheck.js"></script><script src="backupfmt.js"></script><script src="dock.js"></script></body></html>
